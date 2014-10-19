@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res" >
+            <file
+                name="ic_launcher"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/drawable-hdpi/ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/drawable-xhdpi/ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="activity_main_list"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/layout/activity_main_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_main_list"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/menu/activity_main_list.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/values/strings.xml"
+                qualifiers="" >
+                <string name="hello_world" >Hello world!
+                </string>
+                <string name="menu_settings" >Settings
+                </string>
+
+                <string-array name="android_names" >
+                    <item>
+Android beta
+                    </item>
+                    <item>
+Android 1.0
+                    </item>
+                    <item>
+Android 1.1
+                    </item>
+                    <item>
+Cupcake
+                    </item>
+                    <item>
+Donut
+                    </item>
+                    <item>
+Eclair
+                    </item>
+                    <item>
+Froyo
+                    </item>
+                    <item>
+Gingerbread
+                    </item>
+                    <item>
+Honeycomb
+                    </item>
+                    <item>
+Ice Cream Sandwich
+                    </item>
+                    <item>
+Jelly Bean
+                    </item>
+                </string-array>
+
+                <string name="error_title" >Oops Sorry!
+                </string>
+                <string name="no_items" >No items to display!
+                </string>
+                <string name="app_name" >BlogReader
+                </string>
+                <string name="error_message" >There was an error getting data from the blog
+                </string>
+            </file>
+            <file
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/values/styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="AppBaseTheme" >
+
+                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+                </style>
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
+            </file>
+            <file
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/values-v11/styles.xml"
+                qualifiers="v11" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light" >
+
+                    <!-- API 11 theme customizations can go here. -->
+                </style>
+            </file>
+            <file
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/values-v14/styles.xml"
+                qualifiers="v14" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- API 14 theme customizations can go here. -->
+                </style>
+            </file>
+        </source>
+        <source path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/generated/res/rs/debug" />
+        <source path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/generated/res/generated/debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/debug/res" />
+    </dataSet>
+
+</merger>
