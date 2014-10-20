@@ -8295,11 +8295,6 @@ false
                 qualifiers=""
                 type="layout" />
             <file
-                name="activity_main_list"
-                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/menu/activity_main_list.xml"
-                qualifiers=""
-                type="menu" />
-            <file
                 name="blog_web_view"
                 path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/menu/blog_web_view.xml"
                 qualifiers=""
@@ -8423,6 +8418,16 @@ Jelly Bean
             <file
                 name="ic_action_share"
                 path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/drawable-xhdpi/ic_action_share.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="blog_web_view"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/menu-v11/blog_web_view.xml"
+                qualifiers="v11"
+                type="menu" />
+            <file
+                name="ic_action_send_now"
+                path="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/src/main/res/drawable-xhdpi/ic_action_send_now.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
         </source>
