@@ -8319,6 +8319,8 @@ false
                 </string>
                 <string name="title_activity_blog_web_view" >Blog Post
                 </string>
+                <string name="share_chooser_title" >how do you to share?
+                </string>
                 <string name="menu_settings" >Settings
                 </string>
 

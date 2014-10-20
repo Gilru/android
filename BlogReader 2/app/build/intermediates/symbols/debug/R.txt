@@ -351,7 +351,8 @@ int string error_title 0x7f0b0010
 int string hello_world 0x7f0b0011
 int string menu_settings 0x7f0b0012
 int string no_items 0x7f0b0013
-int string title_activity_blog_web_view 0x7f0b0014
+int string share_chooser_title 0x7f0b0014
+int string title_activity_blog_web_view 0x7f0b0015
 int style AppBaseTheme 0x7f0c0000
 int style AppTheme 0x7f0c0001
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0c0002

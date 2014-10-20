@@ -1056,7 +1056,8 @@ containing a value of this type.
         public static final int hello_world=0x7f0b0011;
         public static final int menu_settings=0x7f0b0012;
         public static final int no_items=0x7f0b0013;
-        public static final int title_activity_blog_web_view=0x7f0b0014;
+        public static final int share_chooser_title=0x7f0b0014;
+        public static final int title_activity_blog_web_view=0x7f0b0015;
     }
     public static final class style {
         /** 
