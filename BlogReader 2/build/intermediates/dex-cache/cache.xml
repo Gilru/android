@@ -2,10 +2,28 @@
 <pre-dex-items>
 
     <item
-        dex="/Users/GILBERT/Desktop/Java/BlogReader 2/app/build/intermediates/pre-dexed/debug/support-v4-18.0.0-2484d88715cbcdaf306e7f8449d6546e84c1520d.jar"
-        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/18.0.0/support-v4-18.0.0.jar"
+        dex="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-1fc656443c60485a03d3732a71f999c3aa0ffc22.jar"
+        jar="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
-        sha1="44ec51e9d395a47aab135e5e1b556c0007442156"/>
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/pre-dexed/debug/classes-2ded1ef0e4e8fdad5bde309be702349958a16952.jar"
+        jar="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef"/>
+    <item
+        dex="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/pre-dexed/debug/classes-fac4413adf73773af334ebd4af39ea241d6553ab.jar"
+        jar="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/Users/GILBERT/Desktop/Java/Android/BlogReader 2/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-bca9cd8c8082330ef7549e0398af852faae531fd.jar"
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
 
 </pre-dex-items>

@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
@@ -67,7 +68,9 @@ public class MainListActivity extends ListActivity {
             JSONArray jsonPosts = mBlogData.getJSONArray("posts");
             JSONObject jsonPost = jsonPosts.getJSONObject(position);
             String blogUrl = jsonPost.getString("url");
-            Intent intent = new Intent(Intent.ACTION_VIEW );
+            Intent intent = new Intent(this,BlogWebViewActivity.class);
+            intent.setData(Uri.parse(blogUrl));
+            startActivity(intent);
 
         } catch (JSONException e) {
             logException(e);
