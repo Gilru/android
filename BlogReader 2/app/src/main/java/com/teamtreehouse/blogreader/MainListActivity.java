@@ -1,19 +1,5 @@
 package com.teamtreehouse.blogreader;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Context;
@@ -25,14 +11,26 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainListActivity extends ListActivity {
 
@@ -41,7 +39,7 @@ public class MainListActivity extends ListActivity {
     protected JSONObject mBlogData;
     protected ProgressBar mProgressBar;
     private final String KEY_TITLE = "title";
-    private final String KEY_AUTHOR = "author";
+    private final String KEY_AUTHOR = "sub_title";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +63,7 @@ public class MainListActivity extends ListActivity {
         super.onListItemClick(l, v, position, id);
 
         try {
-            JSONArray jsonPosts = mBlogData.getJSONArray("posts");
+            JSONArray jsonPosts = mBlogData.getJSONArray("blogs");
             JSONObject jsonPost = jsonPosts.getJSONObject(position);
             String blogUrl = jsonPost.getString("url");
             Intent intent = new Intent(this,BlogWebViewActivity.class);
@@ -105,7 +103,7 @@ public class MainListActivity extends ListActivity {
 
         } else {
             try {
-                JSONArray jsonPosts = mBlogData.getJSONArray("posts");
+                JSONArray jsonPosts = mBlogData.getJSONArray("blogs");
                 ArrayList<HashMap<String,String>> blogPosts =
                         new ArrayList<HashMap<String, String>>();
 
@@ -157,7 +155,7 @@ public class MainListActivity extends ListActivity {
             JSONObject jsonResponse = null;
 
             try {
-                URL blogFeedUrl = new URL("http://blog.teamtreehouse.com/api/get_recent_summary/?count=" + NUMBER_OF_POSTS);
+                URL blogFeedUrl = new URL("https://rlypifmj.herokuapp.com/blogs.json");
                 HttpURLConnection connection = (HttpURLConnection) blogFeedUrl.openConnection();
                 connection.connect();
 
