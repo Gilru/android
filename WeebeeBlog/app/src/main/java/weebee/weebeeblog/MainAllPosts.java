@@ -96,7 +96,7 @@ public class MainAllPosts extends ListActivity {
 
     private void handleBlogResponse() {
         mProgressBar.setVisibility(View.INVISIBLE);
-        if (mBlogData == null) {
+        if (mBlogData == null) { 
 //            dialogue
             updateDisplayForErrors();
 
