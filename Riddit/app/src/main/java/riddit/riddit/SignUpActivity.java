@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -26,6 +27,7 @@ public class SignUpActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);// load visual
         setContentView(R.layout.activity_sign_up);
 //        we connect to the view
 
@@ -67,9 +69,13 @@ to check if there was not error */
                     newUser.setPassword(password);
                     newUser.setEmail(email);
 
+                    setProgressBarIndeterminateVisibility(true); // true to make visible
                     newUser.signUpInBackground(new SignUpCallback() {
                         @Override
                         public void done(ParseException e) {
+                            // we use false here because the logInCallback is call(login finish)
+
+                            setProgressBarIndeterminateVisibility(false);
                             if (e == null) {
                                 // Hooray! Let them use the app now.
                                 Intent intent = new Intent(SignUpActivity.this,MainActivity.class);

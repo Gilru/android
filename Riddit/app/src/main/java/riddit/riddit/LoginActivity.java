@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ public class LoginActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);// load visual
         setContentView(R.layout.activity_login);
         mUsername = (EditText) findViewById(R.id.usernameField);
         mPassword = (EditText) findViewById(R.id.passwordField);
@@ -48,10 +50,14 @@ public class LoginActivity extends Activity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 } else {
-//            ready to login
+//            ready to login and we show the progress indicator
+                    setProgressBarIndeterminateVisibility(true); // true to make visible
                     ParseUser.logInInBackground(username, password, new LogInCallback() {
                         @Override
                         public void done(ParseUser user, ParseException e) {
+                         // we use false here because the logInCallback is call(login finish)
+
+                            setProgressBarIndeterminateVisibility(false);
                             if (user != null) {
 //                      hey ready to login!!
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
