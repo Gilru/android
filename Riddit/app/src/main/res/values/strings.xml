@@ -18,5 +18,7 @@
     <string name="signup_error_title">Oops!</string>
     <string name="error_message_login">Make sure your email or your password are not blank</string>
     <string name="menu_log_out_label">SIGN OUT</string>
+    <string name="empty_inbox_label">No new messages!</string>
+    <string name="empty_friends_label">Add friends to beging!</string>
 
 </resources>

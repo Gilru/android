@@ -1,12 +1,12 @@
 package riddit.riddit;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.content.Context;
-import android.support.v13.app.FragmentPagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.Locale;
-
+//alert !!!!!!!!!!!! see import on the top
 /**
  * A {@link android.support.v13.app.FragmentPagerAdapter} that returns a fragment corresponding to
  * one of the sections/tabs/pages.
@@ -29,7 +29,16 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
 //        MainActivity added to fixed code
-        return MainActivity.PlaceholderFragment.newInstance(position + 1);
+//        we add swicth to return different fragment base on the position
+
+        switch (position) {
+            case 0:
+                return new InboxFragment();
+            case 1:
+                return new FriendsFragment();
+        }
+//        PlaceholderFragment change to that below cause i deleted that class
+        return null;
     }
 
     @Override
