@@ -116,6 +116,12 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 
 
         }
+
+        else if (id == R.id.action_edit_friend) {
+//            here we edit our friend
+            Intent intent = new Intent(this,EditFriendsActivity.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 
