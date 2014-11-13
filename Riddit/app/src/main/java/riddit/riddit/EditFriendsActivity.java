@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -95,12 +94,7 @@ public class EditFriendsActivity extends ListActivity {
         });
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.edit_friends, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -127,20 +121,27 @@ public class EditFriendsActivity extends ListActivity {
             // get(position) it's the position of the user click
 
             mFriendsRelation.add(mUsers.get(position));
-//        that method we add save callback for security in case there is a problem
 
-            mCurrentUser.saveInBackground(new SaveCallback() {
-                @Override
-                public void done(ParseException e) {
-//                this mean there was an exeption mean an errors
-                    if (e != null) {
-                        Log.e(TAG, e.getMessage());
-                    }
-                }
-            });
         } else {
 //            we remove friends
+//            relation.remove(post);
+              mFriendsRelation.remove(mUsers.get(position));
         }
+
+        /*        that method we add save callback for security in case there is a problem
+                    we put it at the bottom because we wanna make sure it call for both
+                    instead of duplicate the code
+         */
+
+        mCurrentUser.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+//                this mean there was an exeption mean an errors
+                if (e != null) {
+                    Log.e(TAG, e.getMessage());
+                }
+            }
+        });
 
 
     }
@@ -156,6 +157,10 @@ public class EditFriendsActivity extends ListActivity {
                     Log.e(TAG, e.getMessage());
                 } else {
                     // results have all the Posts the current user liked.
+/*                   we write it to check the user liked cause the check mark don't stay
+                     don't stay automaticly
+ */
+
                     for (int i = 0; i < mUsers.size(); i++) {
                         ParseUser user = mUsers.get(i);
 
