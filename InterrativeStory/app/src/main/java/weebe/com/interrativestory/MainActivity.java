@@ -1,11 +1,11 @@
 package weebe.com.interrativestory;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -25,12 +25,22 @@ public class MainActivity extends Activity {
 //                do stuff when button click
 
                 String name = mNameField.getText().toString();
-                 Toast.makeText(MainActivity.this,name,Toast.LENGTH_LONG ).show();
+
+                startStory(name);
 
 
 
             }
         });
     }
+
+    private void startStory(String name) {
+        Intent intent = new Intent(MainActivity.this, StoryActivity.class);
+//        "name" is the key to refer in the other activity
+        intent.putExtra(getString(R.string.key_name),name);
+        startActivity(intent);
+
+    }
+
 
 }
